@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survey Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Feedback Survey Form</h1>
+    <form id="surveyForm">
+      
+      <!-- Name -->
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+      
+      <!-- Email -->
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      
+      <!-- Age -->
+      <label for="age">Age</label>
+      <input type="number" id="age" name="age" min="10" max="100" placeholder="Enter your age">
+      
+      <!-- Gender -->
+      <label>Gender</label>
+      <div class="options">
+        <label><input type="radio" name="gender" value="Male" required> Male</label>
+        <label><input type="radio" name="gender" value="Female"> Female</label>
+        <label><input type="radio" name="gender" value="Other"> Other</label>
+      </div>
+      
+      <!-- Interests -->
+      <label>What topics interest you? (Select all that apply)</label>
+      <div class="options">
+        <label><input type="checkbox" name="interest" value="Technology"> Technology</label>
+        <label><input type="checkbox" name="interest" value="Sports"> Sports</label>
+        <label><input type="checkbox" name="interest" value="Music"> Music</label>
+        <label><input type="checkbox" name="interest" value="Travel"> Travel</label>
+      </div>
+      
+      <!-- Rating -->
+      <label for="rating">How would you rate our event?</label>
+      <select id="rating" name="rating" required>
+        <option value="">-- Select an option --</option>
+        <option value="Excellent">Excellent</option>
+        <option value="Good">Good</option>
+        <option value="Average">Average</option>
+        <option value="Poor">Poor</option>
+      </select>
+      
+      <!-- Feedback -->
+      <label for="feedback">Additional Feedback</label>
+      <textarea id="feedback" name="feedback" rows="4" placeholder="Write your feedback here..."></textarea>
+      
+      <!-- Submit -->
+      <button type="submit">Submit</button>
+    </form>
+    <p id="message"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
